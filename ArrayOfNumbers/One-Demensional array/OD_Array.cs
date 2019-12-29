@@ -48,12 +48,13 @@ namespace ArrayOfNumbers.One_Demensional_array
                     od_array = new int[lenght];
                 }
             }
+            Console.WriteLine();
         }
 
         /// <summary>
         /// The method allows to enter manually values of elements in the array.
         /// </summary>
-        public static void EnterNumbersOfArray()
+        public static void EnterNumbersOfArrayManually()
         {
             bool isCorrect = true; // flag for "while"
 
@@ -151,6 +152,16 @@ namespace ArrayOfNumbers.One_Demensional_array
                         od_array[j] = temp;
                     }
                 }
+            }
+        }
+
+        public static void ReverseArray()
+        {
+            for (int i = 0, a = od_array.Length-1; i < od_array.Length/2; i++, a--)
+            {
+                int temp = od_array[i];
+                od_array[i] = od_array[a];
+                od_array[a] = temp;
             }
         }
     }

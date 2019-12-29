@@ -35,14 +35,14 @@ namespace ArrayOfNumbers.Actions
                     Console.WriteLine("Wrong format! Try again.\n");
                     Console.ResetColor();
                 }
-                else if (choice != 1 && choice != 2)
+                else if (choice != 1 && choice != 2 && choice != 3)
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Wrong format! Try again.\n");
                     Console.ResetColor();
 
                     isChoice = true;
-                }                
+                }
             }
 
             if (choice == 1)
@@ -53,7 +53,12 @@ namespace ArrayOfNumbers.Actions
             {
                 result = 2;
             }
+            else if (choice == 3)
+            {
+                result = 3;
+            }
 
+            Console.WriteLine();
             return result;
         }
     }
